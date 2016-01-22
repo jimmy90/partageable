@@ -1,23 +1,16 @@
 
 #include "Composant1.h"
 #include "Composant1Version.h"
-
-// declaration des fonctions internes
-int addition_interne(int a1, int a2);
-
+#include "Composant3.h"
+#include "../Composant3/Composant3Version.h"
 
 
 int composant1(int p1, int p2)
 {
-	return addition_interne(p1,p2);
-}
-
-int addition_interne(int a1, int a2)
-{
-	return a1+a2;
+	return composant3(p1, p2);
 }
 
 char * getComposant1Version()
 {
-	return "Composant 1 version " COMPOSANT_VERSION_STR;
+	return " Composant 1 version ==> " COMPOSANT_VERSION_STR " // Composant 3 version ==> " COMPOSANT3_VERSION_STR;
 }
